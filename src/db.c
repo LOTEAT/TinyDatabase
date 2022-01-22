@@ -47,7 +47,7 @@ char* get_db_filename(int argc, char* argv[]) {
 struct InputBuffer_t {
   char* buffer;
   size_t buffer_length;
-  size_t input_length;
+  ssize_t input_length;
 };
 typedef struct InputBuffer_t InputBuffer;
 
@@ -63,7 +63,7 @@ InputBuffer* new_input_buffer() {
 void print_prompt() { printf("tiny_db > "); }
 
 void read_input(InputBuffer* input_buffer) {
-  size_t bytes_read =
+  ssize_t bytes_read =
       getline(&(input_buffer->buffer), &(input_buffer->buffer_length), stdin);
 
   if (bytes_read <= 0) {
