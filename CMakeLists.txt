@@ -11,6 +11,10 @@ project ( TINYDB
 # Source
 set ( SOURCE_CODE
   src/db.c
+  src/defs.h
+  src/exec.c
+  src/connect.c
+  src/decl.h
 )
 
 # Executables
