@@ -10,11 +10,17 @@ project ( TINYDB
 
 # Source
 set ( SOURCE_CODE
+  src/built_in_tables.c
+  src/built_in_tables.h
+  src/dbprint.c
+  src/param.h
+  src/state.h
   src/db.c
   src/defs.h
   src/exec.c
   src/connect.c
   src/decl.h
+  src/table.c
 )
 
 # Executables
